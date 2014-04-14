@@ -49,7 +49,7 @@
     # storing the binaries (programs) that our system would want.
     # Also, Homebrew adopts this convetion so things installed via Homebrew
     # get symlinked into /usr/local
-    set USR_PATHS "/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin"
+    set USR_PATHS /usr/local /usr/local/bin /usr/local/sbin /usr/bin
 
     # Hint: You can interpolate a variable into a string by using the $VARIABLE notation as below.
 
@@ -59,7 +59,7 @@
     # Our PATH variable is special and very important. Whenever we type a command into our shell,
     # it will try to find that command within a directory that is defined in our PATH.
     # Read http://blog.seldomatt.com/blog/2012/10/08/bash-and-the-one-true-path/ for more on that.
-    set PATH "$USR_PATHS:$PATH:~/bin"
+    set PATH ~/bin $USR_PATHS $PATH
 
     # If you go into your shell and type: $PATH you will see the output of your current path.
 
